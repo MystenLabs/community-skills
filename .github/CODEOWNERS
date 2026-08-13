@@ -1,0 +1,7 @@
+# Repo infrastructure — requires team review
+/.github/       @MystenLabs/devrel-team
+/scripts/       @MystenLabs/devrel-team
+/template/      @MystenLabs/devrel-team
+/package.json   @MystenLabs/devrel-team
+README.md       @MystenLabs/devrel-team
+CONTRIBUTING.md @MystenLabs/devrel-team
