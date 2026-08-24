@@ -46,7 +46,7 @@ waap-cli send-tx --permission-token <token> ...
 The origin is bound server-side to the domain that requested it, so a grant
 issued to one application cannot be replayed by another.
 
-## The lifetime ceiling, and what it rules out
+## The lifetime ceiling
 
 **A grant lasts at most two hours, enforced server-side.** It is a session, not
 a standing mandate.
@@ -55,21 +55,8 @@ Inside that session it does what recurring billing wants: many charges against
 one approval, under a ceiling the user set. Across a month it does not, because
 the grant expires long before the next charge.
 
-So these work today:
-
-- Pay-per-use inside a visit
-- Metered API calls
-- An agent running a bounded task
-- In-game purchases during a session
-
-And this does not:
-
-- A subscription that bills on the first of the month
-
-Do not design a monthly billing flow around a grant that will have expired.
-Longer-lived grants are roadmap, not shipped. If a task requires a standing
-mandate, say so rather than building something that silently stops working after
-two hours.
+Works today: pay-per-use inside a visit, metered API calls, an agent running a
+bounded task, in-game purchases during a session.
 
 ## Grants are not a way around policy
 
