@@ -125,7 +125,7 @@ change, deliberately, with a human making that call.
 
 ## Handoff
 
-Because the underlying authority in Squid Mode is a Sui object rather than a
+Because the underlying authority in WaaP Squid Mode is a Sui object rather than a
 server-side flag, it can be transferred. That is what keeps a user from being
 locked to one operator.
 
